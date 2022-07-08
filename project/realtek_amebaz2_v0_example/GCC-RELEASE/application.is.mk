@@ -164,13 +164,9 @@ INCLUDES += -I../../../component/soc/realtek/8710c/misc/os
 INCLUDES += -I../../../component/os/freertos
 #INCLUDES += -I../../../component/os/freertos/freertos_v10.0.1/Source/include
 #INCLUDES += -I../../../component/os/freertos/freertos_v10.0.1/Source/portable/GCC/ARM_RTL8710C
-#os - freertos 10.3.0 start
-INCLUDES += -I../../../component/common/application/amazon/v202007/freertos_kernel/include
-INCLUDES += -I../../../component/os/freertos/freertos_v10.3.0/Source/portable/GCC/ARM_CM33_NTZ/non_secure
-#os - freertos 10.3.0 end
 #os - freertos 10.4.3 start
-#INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/include
-#INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure
+INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/include
+INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure
 #os - freertos 10.4.3 end
 INCLUDES += -I../../../component/os/os_dep/include
 
@@ -608,36 +604,20 @@ SRC_C += ../../../component/os/freertos/freertos_pmu.c
 #SRC_C += ../../../component/os/freertos/freertos_v10.0.1/Source/portable/MemMang/heap_5.c
 #SRC_C += ../../../component/os/freertos/freertos_v10.0.1/Source/portable/GCC/ARM_RTL8710C/port.c
 
-#amazon - freertos 10.3.0 start
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/croutine.c
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/event_groups.c
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/list.c
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/queue.c
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/stream_buffer.c
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/tasks.c
-SRC_C += ../../../component/common/application/amazon/v202007/freertos_kernel/timers.c
+#amazon - freertos 10.4.3 start
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/croutine.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/event_groups.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/list.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/queue.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/stream_buffer.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/tasks.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/timers.c
 
-SRC_C += ../../../component/os/freertos/freertos_v10.3.0/Source/portable/GCC/ARM_CM33_NTZ/non_secure/port.c
-SRC_C += ../../../component/os/freertos/freertos_v10.3.0/Source/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure/port.c
+SRC_C += ../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.c
 
 SRC_C += ../../../component/os/freertos/freertos_heap_rtk.c
 SRC_C += ../../../component/os/freertos/freertos_heap5_config.c
-#amazon - freertos 10.3.0 end
-
-#amazon - freertos 10.4.3 start
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/croutine.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/event_groups.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/list.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/queue.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/stream_buffer.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/tasks.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/timers.c
-
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure/port.c
-#SRC_C += ../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure/portasm.c
-
-#SRC_C += ../../../component/os/freertos/freertos_heap_rtk.c
-#SRC_C += ../../../component/os/freertos/freertos_heap5_config.c
 #amazon - freertos 10.4.3 end
 
 #peripheral - api

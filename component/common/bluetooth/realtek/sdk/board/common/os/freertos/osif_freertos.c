@@ -313,7 +313,7 @@ bool osif_task_signal_clear(void *p_handle)
 {
     BaseType_t ret;
 
-extern BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );
+	//extern BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );
     ret = xTaskNotifyStateClear((TaskHandle_t)p_handle);
     if (ret == pdTRUE)
     {
@@ -567,7 +567,7 @@ bool osif_msg_queue_create(void **pp_handle, uint32_t msg_num, uint32_t msg_size
     }
     else
     {
-        
+
         return false;
     }
 }
@@ -1019,5 +1019,5 @@ void osif_create_secure_context(uint32_t size)
 {
 #if defined(configENABLE_TRUSTZONE) && (configENABLE_TRUSTZONE == 1)
 	rtw_create_secure_context(size);
-#endif    
+#endif
 }

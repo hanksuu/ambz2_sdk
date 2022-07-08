@@ -83,13 +83,9 @@ INCLUDES += -I../../../component/soc/realtek/8710c/misc/os
 INCLUDES += -I../../../component/os/freertos
 #INCLUDES += -I../../../component/os/freertos/freertos_v10.0.1/Source/include
 #INCLUDES += -I../../../component/os/freertos/freertos_v10.0.1/Source/portable/GCC/ARM_RTL8710C
-#os - freertos 10.3.0 start
-INCLUDES += -I../../../component/common/application/amazon/v202007/freertos_kernel/include
-INCLUDES += -I../../../component/os/freertos/freertos_v10.3.0/Source/portable/GCC/ARM_CM33_NTZ/non_secure
-#os - freertos 10.3.0 end
 ##os - freertos 10.4.3 start
-#INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/include
-#INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure
+INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/include
+INCLUDES += -I../../../component/os/freertos/freertos_v10.4.3/portable/GCC/ARM_CM33_NTZ/non_secure
 #os - freertos 10.4.3 end
 INCLUDES += -I../../../component/os/os_dep/include
 
