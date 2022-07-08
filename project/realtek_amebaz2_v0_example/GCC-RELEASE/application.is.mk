@@ -212,7 +212,7 @@ INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/freertos_plus/standard/
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/common/pkcs11_helpers
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/network_manager
-INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaPro/aws_demos/config_files
+INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/aws_demos/config_files
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/common/http_demo_helpers
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/device_shadow_for_aws/source/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/coreJSON/source/include
@@ -230,7 +230,7 @@ INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/portable
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/portable/os
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/abstractions/mqtt_agent/include
-INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaPro/ports/ota
+INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/ota
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/coreMQTT-Agent/source/include
 
 # Source file list
