@@ -46,8 +46,8 @@
 
 #if defined(__ICCARM__) || defined(__CC_ARM) || defined(__GNUC__)
 #include <stdint.h>
-extern uint32_t SystemCoreClock; 
-#endif 
+extern uint32_t SystemCoreClock;
+#endif
 
 /* Cortex M33 port configuration. */
 #define configENABLE_MPU								0
@@ -90,7 +90,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_RECURSIVE_MUTEXES				1
 #define configUSE_QUEUE_SETS                    			1
 #define configUSE_TASK_NOTIFICATIONS				1
-#define configUSE_TRACE_FACILITY						0
+#define configUSE_TRACE_FACILITY						1
 
 /* Constants that define which hook (callback) functions should be used. */
 #define configUSE_IDLE_HOOK                     				0
@@ -184,7 +184,7 @@ standard names - or at least those used in the unmodified vector table. */
 /* Constants related to the generation of run time stats. */
 #define configGENERATE_RUN_TIME_STATS				0
 #if configGENERATE_RUN_TIME_STATS
-#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() 
+#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()
 #define portGET_RUN_TIME_COUNTER_VALUE() xTickCount
 #undef configUSE_TRACE_FACILITY
 #define configUSE_TRACE_FACILITY 1
@@ -265,7 +265,7 @@ In wlan usage, this value is suggested to use value less than 80 milliseconds */
                                                                              } while(0)
 
 /* It's magic trick that let us can enable/disable tickless dynamically */
-#define traceLOW_POWER_IDLE_BEGIN()            do { 
+#define traceLOW_POWER_IDLE_BEGIN()            do {
 
 #define traceLOW_POWER_IDLE_END()              } while (0)
 
