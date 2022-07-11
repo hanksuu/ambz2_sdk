@@ -17,7 +17,7 @@ ss_cert = crypto.load_certificate(crypto.FILETYPE_PEM, ss_buf)
 #opening the firmware_is.bin and getting the number of padding bytes
 fw_bin = open('../../../../../project/realtek_amebaz2_v0_example/GCC-RELEASE/application_is/Debug/bin/firmware_is.bin', 'br').read()
 fw_bin_size = os.path.getsize("../../../../../project/realtek_amebaz2_v0_example/GCC-RELEASE/application_is/Debug/bin/firmware_is.bin")
-fw_padding = 1024-(fw_bin_size%1024)
+fw_padding = 4096-(fw_bin_size%4096)
 
 #padding 0's to make the last block of OTA equal to an integral multiple of block size
 x = bytes([0] * fw_padding)
