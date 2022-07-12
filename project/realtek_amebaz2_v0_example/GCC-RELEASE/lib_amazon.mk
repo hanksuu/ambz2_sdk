@@ -147,6 +147,8 @@ INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/port
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/portable/os
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/abstractions/mqtt_agent/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/coreMQTT-Agent/source/include
+INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/fleet-provisioning/source/include
+INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/fleet_provisioning_with_csr
 
 INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/aws_demos/config_files
 INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/ota
@@ -236,6 +238,9 @@ SRC_C += ../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/ota_cbor.
 SRC_C += ../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/ota_http.c
 SRC_C += ../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/ota_interface.c
 SRC_C += ../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/ota_mqtt.c
+
+#fleet-provisioning
+SRC_C += ../../../lib_amazon/freertos_LTS/libraries/fleet-provisioning/source/fleet_provisioning.c
 
 ###vendor
 ##port
