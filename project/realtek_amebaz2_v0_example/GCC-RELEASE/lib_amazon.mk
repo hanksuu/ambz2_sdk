@@ -99,6 +99,11 @@ INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/network_manager
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/common/http_demo_helpers
 INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/common/mqtt_demo_helpers
+INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/dev_mode_key_provisioning/include
+INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/common/pkcs11_helpers
+INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/device_defender_for_aws
+INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/common/mqtt_subscription_manager
+INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/fleet_provisioning_with_csr
 
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/freertos_plus/standard/utils/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/logging/include
@@ -148,7 +153,7 @@ INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/ota_for_aws/source/port
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/abstractions/mqtt_agent/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/coreMQTT-Agent/source/include
 INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/fleet-provisioning/source/include
-INCLUDES += -I../../../lib_amazon/freertos_LTS/demos/fleet_provisioning_with_csr
+INCLUDES += -I../../../lib_amazon/freertos_LTS/libraries/abstractions/platform/include/platform
 
 INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/aws_demos/config_files
 INCLUDES += -I../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/ota
@@ -249,6 +254,44 @@ SRC_C += ../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/o
 SRC_C += ../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/pkcs11/core_pkcs11_pal.c
 SRC_C += ../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/secure_sockets/iot_secure_sockets.c
 SRC_C += ../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/ports/wifi/iot_wifi.c
+
+##amazon_freertos_LTS - demos
+#common
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/common/http_demo_helpers/http_demo_utils.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/common/mqtt_demo_helpers/mqtt_demo_helpers.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/common/mqtt_subscription_manager/mqtt_subscription_manager.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/common/ota_demo_helpers/ota_application_version.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/common/pkcs11_helpers/pkcs11_helpers.c
+#coreHTTP
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/coreHTTP/http_demo_mutual_auth.c
+#coreMQTT
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/coreMQTT/mqtt_demo_mutual_auth.c
+#demo_runner
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/demo_runner/aws_demo.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/demo_runner/iot_demo_freertos.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/demo_runner/iot_demo_runner.c
+#dev_mode_key_provisioning
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/dev_mode_key_provisioning/src/aws_dev_mode_key_provisioning.c
+#device_shadow_for_aws
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/device_shadow_for_aws/shadow_demo_main.c
+#device_defender_for_aws
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/device_defender_for_aws/metrics_collector/lwip/metrics_collector.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/device_defender_for_aws/defender_demo.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/device_defender_for_aws/report_builder.c
+#jobs_for_aws
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/jobs_for_aws/jobs_demo.c
+#network_manager
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/network_manager/aws_iot_network_manager.c
+#ota
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/ota/ota_demo_core_mqtt/ota_demo_core_mqtt.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/ota/ota_demo_core_http/ota_demo_core_http.c
+
+SRC_C += ../../../lib_amazon/freertos_LTS/vendors/realtek/boards/amebaZ2/aws_demos/application_code/aws_main.c
+
+#fleet_provisioning_with_csr
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/fleet_provisioning_with_csr/fleet_provisioning_demo.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/fleet_provisioning_with_csr/pkcs11_operations.c
+SRC_C += ../../../lib_amazon/freertos_LTS/demos/fleet_provisioning_with_csr/tinycbor_serializer.c
 
 #lib_version
 VER_C += $(TARGET)_version.c
