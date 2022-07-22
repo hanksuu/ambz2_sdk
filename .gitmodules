@@ -1,0 +1,6 @@
+[submodule "lib_amazon/freertos_LTS"]
+	path = lib_amazon/freertos_LTS
+	url = https://github.com/ambiot/amazon-freertos.git
+[submodule "component/os/freertos/freertos_v10.4.3"]
+	path = component/os/freertos/freertos_v10.4.3
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
